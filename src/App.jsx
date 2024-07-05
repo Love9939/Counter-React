@@ -5,15 +5,21 @@ function App() {
   const[Count, setCount]=useState(0)
 
   const Incriment= () =>{
-     return setCount(Count + 50)  ;
+     return setCount(Count + 1)  ;
      
 
   }
   
   const Decriment = () =>{
-    setCount(Count - 50)
+    setCount(Count - 1)
     
   }
+  const reset = ()=>{
+    if(count ===10 || count === -10){
+      return setCount(0)
+    }
+  }
+  reset();
 
   return (
     <>
